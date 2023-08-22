@@ -40,7 +40,7 @@ const sendMailToRecoveryPassword = async(userMail,token)=>{
     html: `
     <h1>Sistema de gestión (VET-ESFOT 🐶 😺)</h1>
     <hr>
-    <a href="http://localhost:5173/recuperar-password/${token}">Clic para reestablecer tu contraseña</a>
+    <a href="https://veterinaria-exam.vercel.app/recuperar-password/${token}">Clic para reestablecer tu contraseña</a>
     <hr>
     <footer>Grandote te da la Bienvenida!</footer>
     `
