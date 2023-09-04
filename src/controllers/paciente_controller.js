@@ -1,3 +1,4 @@
+// Cambio aqui
 import Paciente from "../models/Paciente.js"
 import mongoose from "mongoose"
 
