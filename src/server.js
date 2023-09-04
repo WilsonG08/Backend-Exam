@@ -13,8 +13,16 @@ dotenv.config()
 
 // Configuraciones 
 app.set('port',process.env.port || 3000)
-app.use(cors())
 
+// Aquí declaras las opciones de cors
+const corsOptions = {
+    origin: 'https://veterinaria-exam-7c3peunpm-wilsong08.vercel.app/', // Aquí pones el origen de tus solicitudes
+    credentials: true,
+    optionSuccessStatus: 200
+  }
+
+// Aquí usas el paquete cors con las opciones que declaraste
+app.use(cors(corsOptions));
 
 // Middlewares 
 app.use(express.json())
