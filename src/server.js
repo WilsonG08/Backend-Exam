@@ -16,7 +16,7 @@ app.set('port',process.env.port || 3000)
 
 // Aquí declaras las opciones de cors
 const corsOptions = {
-    origin: 'https://veterinaria-exam-7c3peunpm-wilsong08.vercel.app/', // Aquí pones el origen de tus solicitudes
+    origin: 'https://veterinaria-exam.vercel.app/', // Aquí pones el origen de tus solicitudes
     credentials: true,
     optionSuccessStatus: 200
   }
