@@ -85,7 +85,7 @@ const actualizarPerfil = async (req,res)=>{
         const veterinarioBDDMail = await Veterinario.findOne({email:req.body.email})
         if (veterinarioBDDMail)
         {
-            return res.status(404).json({msg:`Lo sentimos, el existe ya se encuentra registrado`})  
+            return res.status(404).json({msg:`Lo sentimos, el usuario ya se encuentra registrado`})  
         }
     }
     veterinarioBDD.nombre = req.body.nombre 

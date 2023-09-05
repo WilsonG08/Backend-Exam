@@ -22,6 +22,7 @@ const registrarPaciente = async(req,res)=>{
         const {nombre, propietario, email, celular, convencional, ingreso, salida, sintomas, veterinario} = req.body
         const nuevoPaciente = new Paciente({nombre, propietario, email, celular, convencional, ingreso, salida, sintomas, veterinario})
         nuevoPaciente.veterinario=req.body.id
+        //console.log(req.body)
         await nuevoPaciente.save()
         res.status(200).json({msg:"Registro exitoso del paciente"})
     }
@@ -43,6 +44,7 @@ const actualizarPaciente = async(req,res)=>{
         console.log(error)
     }
 }
+
 
 
 const eliminarPaciente = async (req,res)=>{
