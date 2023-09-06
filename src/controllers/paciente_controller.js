@@ -47,7 +47,7 @@ const registrarPaciente = async(req,res)=>{
         if (Object.values(req.body).includes("")) return res.status(400).json({msg:"Lo sentimos, debes llenar todos los campos"})
         const {nombre, propietario, email, celular, convencional, ingreso, salida, sintomas, veterinario} = req.body
         const nuevoPaciente = new Paciente({nombre, propietario, email, celular, convencional, ingreso, salida, sintomas, veterinario})
-        nuevoPaciente.veterinario=req.body._id
+        nuevoPaciente.veterinario=req.veterinarioBDD._id
         //console.log(req.body)
         await nuevoPaciente.save()
         res.status(200).json({msg:"Registro exitoso del paciente"})
